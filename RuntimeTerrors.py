@@ -12,7 +12,7 @@ win.bgcolor("black")
 #us
 win.register_shape("BlackHatHackerEnemy.gif") #test commit
 win.register_shape("ComputerSpaceship.gif")
-win.register_shape("binaryone.gif")
+win.register_shape("BinaryBullet.gif")
 win.register_shape("invadershipinverted.gif")
 #Title Sequence
 begin_pen = turtle.Turtle() #us
@@ -61,7 +61,7 @@ begin_pen.clear()
 
 #player bullet
 bullet = turtle.Turtle()
-bullet.shape("binaryone.gif")
+bullet.shape("BinaryBullet.gif")
 bullet.pensize(7)
 bullet.penup()
 bullet.speed(60)
