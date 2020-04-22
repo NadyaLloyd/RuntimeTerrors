@@ -141,7 +141,7 @@ for enemy in Enemies:
 	enemy.penup()
 	enemy.speed(10)
 	x = random.randint(-200,200)
-	y = random.randint(100,250)
+	y = random.randint(100,250) #test
 	enemy.setposition(x,y)
 
 
