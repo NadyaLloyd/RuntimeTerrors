@@ -146,7 +146,7 @@ for enemy in Enemies:
 
 
 #us down
-enemy2 = turtle.Turtle()
+enemy2 = turtle.Turtle() #commit
 def Enemy2():#us down
 	def Enemy2():#us down
  		enemy2.shape("invadershipinverted.gif")
