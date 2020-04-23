@@ -1,6 +1,7 @@
 import turtle
 import math
 import random
+import os 
 win = turtle.Screen()
 win.title("Space Invaderz")
 
@@ -104,6 +105,7 @@ def MoveRight():
 def FireBullet():
  global bulletstate #any change to the bullet is changed in the global state as well
  if bulletstate == "ready":
+ 	os.system("afplay gun.wav&")
  	bulletstate == "fire"
  	#move coordinate to above the player
  	x = player.xcor()
@@ -221,6 +223,7 @@ while True:
 
 
  if isCollision(player,enemy):
+ 	os.system("afplay explosion.wav&")
  	player.hideturtle()
  	enemy.hideturtle()
  	border_pen.hideturtle() #us down
@@ -235,16 +238,17 @@ while True:
  	win.exitonclick()
  	break
  if noCollision(player,enemy): #us
- 	player.hideturtle()
- 	enemy.hideturtle()
- 	border_pen.hideturtle()
- 	end_pen = turtle.Turtle()
- 	end_pen.color("#FF0000")
- 	end_pen.speed(10)
- 	end_pen.pendown()
- 	end_pen.setposition(0,0)
- 	end = "Game Over"
- 	end_pen.write(end, False, align = "Center", font = ("Bree Sherif", 85 , "normal"))
- 	end_pen.hideturtle()
- 	win.exitonclick()
- 	break
+    os.system("afplay explosion.wav&")
+    player.hideturtle()
+    enemy.hideturtle()
+    border_pen.hideturtle()
+    end_pen = turtle.Turtle()
+    end_pen.color("#FF0000")
+    end_pen.speed(10)
+    end_pen.pendown()
+    end_pen.setposition(0,0)
+    end = "Game Over"
+    end_pen.write(end, False, align = "Center", font = ("Bree Sherif", 85 , "normal"))
+    end_pen.hideturtle()
+    win.exitonclick()
+    break
